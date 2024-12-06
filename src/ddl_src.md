@@ -20,12 +20,15 @@ VALUES
 ```
 
 ### DDL src.orders
+
+```
 CREATE TABLE src.orders (
 	order_id varchar NOT NULL,
 	client_id varchar NOT NULL,
 	item_id varchar NOT NULL,
 	status varchar NULL
 );
+```
 
 ### Пример данных в src.orders
 ```
@@ -48,12 +51,13 @@ CREATE TABLE src.items (
 
 ### Пример данных в src.items
 
+```
 INSERT INTO src.items (item_id, item_name)
 VALUES 
 ('IT001', 'Smartphone'),
 ('IT002', 'Laptop'),
 ('IT003', 'Headphones');
-
+```
 
 ### DDL src.subscriptions
 
