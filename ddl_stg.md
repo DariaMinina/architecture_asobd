@@ -1,14 +1,13 @@
-# Источник (сторонняя база)
+# Staging-слой
 
 ### DDL stg.clients
 
 ```
 CREATE TABLE stg.clients (
-  __connect_partition int8,
-  __connect_offset int8,
-	client_id varchar,
-	gender varchar,
-	registration_date date,
+  id int8,
+  client_id varchar,
+  gender varchar,
+  registration_date date,
   op_ts timestamp
 );
 ```
@@ -19,11 +18,11 @@ CREATE TABLE stg.clients (
 ('CL002', 'M', DATE '2023-03-20'),
 ('CL003', NULL, DATE '2023-05-10');
 ```
-| __connect_partition | __connect_offset | client_id |  gender | registration_date | op_ts |
-|---|---|---|---|---|---|
-|   |   | CL001  | F |  2023-01-15 |   |
-|   |   | CL002  | M |  2023-03-20 |   |
-|   |   | CL003  | NULL |  2023-05-10 |   |
+| id | client_id |  gender | registration_date | op_ts |
+|---|---|---|---|---|
+|   | CL001  | F |  2023-01-15 |   |
+|   | CL002  | M |  2023-03-20 |   |
+|   | CL003  | NULL |  2023-05-10 |   |
 
 ### DDL stg.orders
 
