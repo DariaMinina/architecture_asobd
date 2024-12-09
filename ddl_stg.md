@@ -11,18 +11,21 @@ CREATE TABLE stg.clients (
   op_ts timestamp
 );
 ```
+
 ### Пример данных в stg.clients
 
 ```
-('CL001', 'F', DATE '2023-01-15'),
-('CL002', 'M', DATE '2023-03-20'),
-('CL003', NULL, DATE '2023-05-10');
+insert stg.clients (
+  client_id,
+  gender,
+  registration_date,
+  op_ts
+) values
+('CL001', 'M', DATE '2023-01-15', TIMESTAMP '2023-01-15 10:00:00'),
+('CL002', 'F', DATE '2023-02-20', TIMESTAMP '2023-02-20 14:30:00'),
+('CL003', 'M', DATE '2023-03-25', TIMESTAMP '2023-03-25 09:15:00'),
+('CL004', 'F', DATE '2023-04-10', TIMESTAMP '2023-04-10 18:45:00');
 ```
-| id | client_id |  gender | registration_date | op_ts |
-|---|---|---|---|---|
-|   | CL001  | F |  2023-01-15 |   |
-|   | CL002  | M |  2023-03-20 |   |
-|   | CL003  | NULL |  2023-05-10 |   |
 
 ### DDL stg.orders
 
