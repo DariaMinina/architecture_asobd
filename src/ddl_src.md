@@ -75,9 +75,9 @@ CREATE TABLE src.subscriptions (
 ```
 INSERT INTO src.subscriptions (subscription_id, client_id, subsc_status)
 VALUES 
-('SUB001', 'CL001', 'Active'),
-('SUB002', 'CL002', 'Pending'),
-('SUB003', 'CL003', 'Cancelled');
+('SUB001', 'CL001', 'premium'),
+('SUB002', 'CL002', 'premium'),
+('SUB003', 'CL003', 'premium');
 ```
 
 ### DDL src.favorites 
