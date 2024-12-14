@@ -3,36 +3,31 @@
 -- Hub for Clients
 CREATE TABLE hub_clients (
 client_id VARCHAR PRIMARY KEY,
-load_ts TIMESTAMP,
-record_source VARCHAR
+load_ts TIMESTAMP
 );
 
 -- Hub for Items
 CREATE TABLE hub_items (
 item_id VARCHAR PRIMARY KEY,
-load_ts TIMESTAMP,
-record_source VARCHAR
+load_ts TIMESTAMP
 );
 
 -- Hub for Orders
 CREATE TABLE hub_orders (
 order_id VARCHAR PRIMARY KEY,
-load_ts TIMESTAMP,
-record_source VARCHAR
+load_ts TIMESTAMP
 );
 
 -- Hub for Subscriptions
 CREATE TABLE hub_subscriptions (
 subscription_id VARCHAR PRIMARY KEY,
-load_ts TIMESTAMP,
-record_source VARCHAR
+load_ts TIMESTAMP
 );
 
 -- Hub for Tracker
 CREATE TABLE hub_tracker (
 track_id VARCHAR PRIMARY KEY,
-load_ts TIMESTAMP,
-record_source VARCHAR
+load_ts TIMESTAMP
 );
 
 // Links
@@ -42,7 +37,6 @@ CREATE TABLE link_client_order (
 client_id VARCHAR,
 order_id VARCHAR,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (client_id, order_id)
 );
 
@@ -51,7 +45,6 @@ CREATE TABLE link_client_subscription (
 client_id VARCHAR,
 subscription_id VARCHAR,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (client_id, subscription_id)
 );
 
@@ -60,7 +53,6 @@ CREATE TABLE link_client_favorites (
 client_id VARCHAR,
 item_id VARCHAR,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (client_id, item_id)
 );
 
@@ -69,7 +61,6 @@ CREATE TABLE link_client_tracker (
 client_id VARCHAR,
 track_id VARCHAR,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (client_id, track_id)
 );
 
@@ -84,7 +75,6 @@ registration_date DATE,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (client_id, load_ts)
 );
 
@@ -97,7 +87,6 @@ accepted BOOLEAN,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (order_id, load_ts)
 );
 
@@ -108,7 +97,6 @@ item_name VARCHAR,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (item_id, load_ts)
 );
 
@@ -119,7 +107,6 @@ subsc_status VARCHAR,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (subscription_id, load_ts)
 );
 
@@ -131,7 +118,6 @@ visit_platform VARCHAR,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
-record_source VARCHAR,
 PRIMARY KEY (track_id, load_ts)
 );
 
