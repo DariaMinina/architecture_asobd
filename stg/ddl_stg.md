@@ -137,10 +137,10 @@ INSERT INTO stg.favorites (
   src_type,
   op_ts
 ) VALUES
-('IT001', 'CL001', 'src.favorites', TIMESTAMP '2023-01-15 10:00:00'),
-('IT002', 'CL001', 'src.favorites', TIMESTAMP '2023-01-16 11:30:00'),
-('IT003', 'CL002', 'src.favorites', TIMESTAMP '2023-01-17 13:45:00'),
-('IT001', 'CL003', 'src.favorites', TIMESTAMP '2023-01-18 09:20:00');
+('ITEM001', 'CL001', 'src.favorites', TIMESTAMP '2023-01-15 10:00:00'),
+('ITEM002', 'CL001', 'src.favorites', TIMESTAMP '2023-01-16 11:30:00'),
+('ITEM003', 'CL002', 'src.favorites', TIMESTAMP '2023-01-17 13:45:00'),
+('ITEM001', 'CL003', 'src.favorites', TIMESTAMP '2023-01-18 09:20:00');
 ```
 
 ### DDL stg.tracker
