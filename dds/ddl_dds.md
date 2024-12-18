@@ -117,8 +117,7 @@ PRIMARY KEY (client_id, load_ts)
 CREATE TABLE dds.sat_order_details (
 order_id VARCHAR,
 status VARCHAR,
-order_date DATE,
-accepted BOOLEAN,
+order_ts TIMESTAMP,
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
@@ -273,10 +272,10 @@ INSERT INTO dds.sat_client_details (client_id, gender, registration_date, src_ty
 
 ```
 INSERT INTO dds.sat_order_details (order_id, status, order_date, accepted, src_type, op_ts, load_ts) VALUES 
-('ORD001', 'pending', '2023-01-15 09:50:00', TRUE, 'src.orders', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
-('ORD002', 'processing', '2023-01-16 11:29:56', TRUE, 'src.orders', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
-('ORD003', 'done', '2023-01-17 13:44:58', TRUE, 'src.orders', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
-('ORD004', 'cancelled', '2023-01-18 09:00:00', FALSE, 'src.orders', TIMESTAMP '2023-01-18 09:20:00', '2024-12-17 00:00:00');
+('ORD001', 'pending', '2023-01-15 09:59:56', 'src.orders', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
+('ORD002', 'processing', '2023-01-16 11:29:57', 'src.orders', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
+('ORD003', 'done', 'src.orders', '2023-01-17 13:44:57', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
+('ORD004', 'cancelled', 'src.orders', '2023-01-18 09:19:58', TIMESTAMP '2023-01-18 09:20:00', '2024-12-17 00:00:00');
 ```
 
 ### Satellite for Item Details

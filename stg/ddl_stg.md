@@ -38,6 +38,7 @@ CREATE TABLE stg.orders (
   client_id varchar,
   item_id varchar,
   status varchar,
+  order_ts timestamp,
   src_type varchar,
   op_ts timestamp
 );
@@ -51,13 +52,14 @@ INSERT INTO stg.orders (
   client_id,
   item_id,
   status,
+  order_ts,
   src_type,
   op_ts
 ) VALUES
-('ORD001', 'CL001', 'ITEM001', 'pending', 'src.orders', TIMESTAMP '2023-01-15 10:00:00'),
-('ORD002', 'CL001', 'ITEM002', 'processing', 'src.orders', TIMESTAMP '2023-01-16 11:30:00'),
-('ORD003', 'CL002', 'ITEM003', 'done', 'src.orders', TIMESTAMP '2023-01-17 13:45:00'),
-('ORD004', 'CL003', 'ITEM004', 'cancelled', 'src.orders', TIMESTAMP '2023-01-18 09:20:00');
+('ORD001', 'CL001', 'ITEM001', 'pending', '2023-01-15 09:59:56', 'src.orders', TIMESTAMP '2023-01-15 10:00:00'),
+('ORD002', 'CL001', 'ITEM002', 'processing', '2023-01-16 11:29:57', 'src.orders', TIMESTAMP '2023-01-16 11:30:00'),
+('ORD003', 'CL002', 'ITEM003', 'done', '2023-01-17 13:44:57', 'src.orders', TIMESTAMP '2023-01-17 13:45:00'),
+('ORD004', 'CL003', 'ITEM004', 'cancelled', '2023-01-18 09:19:58', 'src.orders', TIMESTAMP '2023-01-18 09:20:00');
 
 ```
 
