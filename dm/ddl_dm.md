@@ -1,7 +1,7 @@
 
 ```
 CREATE TABLE result_data_mart (
-client_id VARCHAR PRIMARY KEY,                          
+client_id VARCHAR,                          
 gender VARCHAR,                                         
 registration_date DATE,                                 
 first_order_date DATE,                                  
@@ -22,6 +22,7 @@ total_gmv DECIMAL(10, 2),
 
 favorite_items_count INT,                              
 
-load_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,           
+report_date DATE,
+PRIMARY KEY (client_id, report_date)
 );
 ```
