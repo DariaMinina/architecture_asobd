@@ -271,7 +271,7 @@ INSERT INTO dds.sat_client_details (client_id, gender, registration_date, src_ty
 ### Satellite for Order Details
 
 ```
-INSERT INTO dds.sat_order_details (order_id, status, order_date, accepted, src_type, op_ts, load_ts) VALUES 
+INSERT INTO dds.sat_order_details (order_id, status, order_ts, src_type, op_ts, load_ts) VALUES 
 ('ORD001', 'pending', '2023-01-15 09:59:56', 'src.orders', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
 ('ORD002', 'processing', '2023-01-16 11:29:57', 'src.orders', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
 ('ORD003', 'done', 'src.orders', '2023-01-17 13:44:57', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
