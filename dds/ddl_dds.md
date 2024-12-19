@@ -62,6 +62,17 @@ PRIMARY KEY (client_id, order_id)
 );
 ```
 
+### Link between Orders and Items
+
+```
+CREATE TABLE dds.link_order_item (
+order_id VARCHAR,
+item_id VARCHAR,
+load_ts TIMESTAMP,
+PRIMARY KEY (order_id, item_id)
+);
+```
+
 ### Link between Clients and Subscriptions
 
 ```
@@ -224,10 +235,20 @@ INSERT INTO dds.hub_tracker (track_id, load_ts) VALUES
 
 ```
 INSERT INTO dds.link_client_order (client_id, order_id, load_ts) VALUES 
-('CL001', 'OR001', '2024-12-17 00:00:00'),
-('CL001', 'OR002', '2024-12-17 00:00:00'),
-('CL002', 'OR003', '2024-12-17 00:00:00'),
-('CL003', 'OR004', '2024-12-17 00:00:00');
+('CL001', 'ORD001', '2024-12-17 00:00:00'),
+('CL001', 'ORD002', '2024-12-17 00:00:00'),
+('CL002', 'ORD003', '2024-12-17 00:00:00'),
+('CL003', 'ORD004', '2024-12-17 00:00:00');
+```
+
+### Link between Orders and Items
+
+```
+INSERT INTO dds.link_client_order (order_id, item_id, load_ts) VALUES 
+('ORD001', 'ITEM001', '2024-12-17 00:00:00'),
+('ORD002', 'ITEM002', '2024-12-17 00:00:00'),
+('ORD003', 'ITEM003', '2024-12-17 00:00:00'),
+('ORD004', 'ITEM004', '2024-12-17 00:00:00');
 ```
 
 ### Link between Clients and Subscriptions  
