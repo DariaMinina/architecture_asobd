@@ -131,6 +131,7 @@ PRIMARY KEY (order_id, load_ts)
 CREATE TABLE dds.sat_item_details (
 item_id VARCHAR,
 item_name VARCHAR,
+item_price DECIMAL(10,2),
 src_type VARCHAR,
 op_ts TIMESTAMP,
 load_ts TIMESTAMP,
@@ -271,7 +272,7 @@ INSERT INTO dds.sat_client_details (client_id, gender, registration_date, src_ty
 ### Satellite for Order Details
 
 ```
-INSERT INTO dds.sat_order_details (order_id, status, order_date, accepted, src_type, op_ts, load_ts) VALUES 
+INSERT INTO dds.sat_order_details (order_id, status, order_ts, src_type, op_ts, load_ts) VALUES 
 ('ORD001', 'pending', '2023-01-15 09:59:56', 'src.orders', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
 ('ORD002', 'processing', '2023-01-16 11:29:57', 'src.orders', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
 ('ORD003', 'done', 'src.orders', '2023-01-17 13:44:57', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
@@ -281,11 +282,11 @@ INSERT INTO dds.sat_order_details (order_id, status, order_date, accepted, src_t
 ### Satellite for Item Details
 
 ```
-INSERT INTO dds.sat_item_details (item_id, item_name, src_type, op_ts, load_ts) VALUES 
-('ITEM001', 'Smartphone', 'src.items', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
-('ITEM002', 'Laptop', 'src.items', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
-('ITEM003', 'Tablet', 'src.items', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
-('ITEM004', 'Headphones', 'src.items', TIMESTAMP '2023-01-18 09:20:00', '2024-12-17 00:00:00');
+INSERT INTO dds.sat_item_details (item_id, item_name, item_price, src_type, op_ts, load_ts) VALUES 
+('ITEM001', 'Smartphone', 129999.00, 'src.items', TIMESTAMP '2023-01-15 10:00:00', '2024-12-17 00:00:00'),
+('ITEM002', 'Laptop', 499999.00, 'src.items', TIMESTAMP '2023-01-16 11:30:00', '2024-12-17 00:00:00'),
+('ITEM003', 'Tablet', 59999.00,'src.items', TIMESTAMP '2023-01-17 13:45:00', '2024-12-17 00:00:00'),
+('ITEM004', 'Headphones', 39999.00, 'src.items', TIMESTAMP '2023-01-18 09:20:00', '2024-12-17 00:00:00');
 ```
 
 ### Satellite for Subscription Details
