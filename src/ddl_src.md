@@ -34,9 +34,9 @@ CREATE TABLE src.orders (
 ```
 INSERT INTO src.orders (order_id, client_id, item_id, status)
 VALUES 
-('ORD001', 'CL001', 'IT001', 'accepted'),
-('ORD002', 'CL002', 'IT002', 'done'),
-('ORD003', 'CL003', 'IT001', 'cancelled');
+('ORD001', 'CL001', 'ITEM001', 'accepted'),
+('ORD002', 'CL002', 'ITEM002', 'done'),
+('ORD003', 'CL003', 'ITEM001', 'cancelled');
 ```
 
 ### DDL src.items
@@ -44,7 +44,8 @@ VALUES
 ```
 CREATE TABLE src.items (
 	item_id varchar NOT NULL,
-	item_name varchar NOT null,
+	item_name varchar NOT NULL,
+	item_price decimal(10,2) NOT NULL,
 	CONSTRAINT items_pk PRIMARY KEY (item_id)
 );
 ```
@@ -52,11 +53,11 @@ CREATE TABLE src.items (
 ### Пример данных в src.items
 
 ```
-INSERT INTO src.items (item_id, item_name)
+INSERT INTO src.items (item_id, item_name, item_price)
 VALUES 
-('IT001', 'Smartphone'),
-('IT002', 'Laptop'),
-('IT003', 'Headphones');
+('ITEM001', 'Smartphone', 129999.00),
+('ITEM002', 'Laptop', 499999.00),
+('ITEM003', 'Headphones', 39999.00);
 ```
 
 ### DDL src.subscriptions

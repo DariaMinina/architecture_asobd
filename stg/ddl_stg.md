@@ -70,6 +70,7 @@ CREATE TABLE stg.items (
   id SERIAL PRIMARY KEY,
   item_id varchar,
   item_name varchar,
+  item_price decimal(10,2),
   src_type varchar,
   op_ts timestamp
 );
@@ -81,13 +82,14 @@ CREATE TABLE stg.items (
 INSERT INTO stg.items (
   item_id,
   item_name,
+  item_price,
   src_type,
   op_ts
 ) VALUES
-('ITEM001', 'Smartphone', 'src.items', TIMESTAMP '2023-01-15 10:00:00'),
-('ITEM002', 'Laptop', 'src.items', TIMESTAMP '2023-01-16 11:30:00'),
-('ITEM003', 'Tablet', 'src.items', TIMESTAMP '2023-01-17 13:45:00'),
-('ITEM004', 'Headphones', 'src.items', TIMESTAMP '2023-01-18 09:20:00');
+('ITEM001', 'Smartphone', 129999.00, 'src.items', TIMESTAMP '2023-01-15 10:00:00'),
+('ITEM002', 'Laptop', 499999.00, 'src.items', TIMESTAMP '2023-01-16 11:30:00'),
+('ITEM003', 'Tablet', 59999.00, 'src.items', TIMESTAMP '2023-01-17 13:45:00'),
+('ITEM004', 'Headphones', 39999.00, 'src.items', TIMESTAMP '2023-01-18 09:20:00');
 ```
 
 ### DDL stg.subscriptions
