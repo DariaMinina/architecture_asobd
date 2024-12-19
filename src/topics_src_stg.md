@@ -37,8 +37,8 @@
     "data": {
       "order_id": "ORD001",
       "client_id": "CL001",
-      "item_id": "IT001",
-      "status": "Shipped"
+      "item_id": "ITEM001",
+      "status": "done"
     }
   },
   "offset": 50,
@@ -59,8 +59,9 @@
   "value": {
     "type": "ITEM",
     "data": {
-      "item_id": "IT001",
-      "item_name": "Smartphone"
+      "item_id": "ITEM001",
+      "item_name": "Smartphone",
+      "item_price": 129999.00
     }
   },
   "offset": 200,
