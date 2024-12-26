@@ -41,7 +41,6 @@ SET
 FROM (
     SELECT
         cl.client_id,
-        -- Get the registration date from the most recent record in the satellite
         sd.registration_date
     FROM 
         dds.hub_clients cl
@@ -289,7 +288,6 @@ SET
 FROM (
     SELECT
         cl.client_id,
-        -- Count the number of favorite items for each client
         COUNT(DISTINCT lcf.item_id) AS favourite_items_count
     FROM 
         dds.hub_clients cl
